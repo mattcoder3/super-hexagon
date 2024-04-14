@@ -1,1 +1,1 @@
-# super-hexagon
+# Super Hexagon
