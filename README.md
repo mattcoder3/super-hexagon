@@ -1,4 +1,4 @@
-# Super Hexagon
+# Super Hexago
 
 Este es un proyecto de programación en vivo donde programamos el videojuego "Super Hexagon" utilizando HTML, JavaScript y la biblioteca p5.js.
 
@@ -18,8 +18,3 @@ Este es un proyecto de programación en vivo donde programamos el videojuego "Su
 - HTML5: Para la estructura básica de la página web del juego.
 - JavaScript: Para la lógica del juego y la interacción del usuario.
 - p5.js: Biblioteca de JavaScript para la creación de gráficos y animaciones.
-
-
-
-
-
