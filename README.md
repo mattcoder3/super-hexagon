@@ -18,3 +18,19 @@ Este es un proyecto de programación en vivo donde programamos el videojuego "Su
 - HTML5: Para la estructura básica de la página web del juego.
 - JavaScript: Para la lógica del juego y la interacción del usuario.
 - p5.js: Biblioteca de JavaScript para la creación de gráficos y animaciones.
+
+### Pendiente
+
+- Ícono a la app
+- Score
+- Pulir la death-condition
+- Mensaje de reinicio de partida
+- Localstorage de record por usuario
+- Temas (colores)
+- Dificultad dinámica
+- Página de inicio
+- Efectos visuales
+- Efectos de sonido
+- Música
+- Leaderboard (usando una base de datos)
+- Gráficos de estadísticas
