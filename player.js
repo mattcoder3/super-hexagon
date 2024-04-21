@@ -2,7 +2,6 @@ class Player {
 	constructor(angle) {
 		this.angle = angle;
 		this.radius = 30;
-		this.center = [width / 2, height / 2];
 		this.rePos();
 	}
 
@@ -17,15 +16,26 @@ class Player {
 		this.rePos();
 	}
 
-	calcDeath(hexAngle) {
-		let diff = hexAngle - this.angle;
-		if (!(diff > 0 && diff < (2 * Math.PI) / 6)) {
-			gameOver = true;
+	calcDeath(leftAngle) {
+		let rightAngle =
+			(leftAngle + (5 * (2 * Math.PI)) / 6) % (2 * Math.PI);
+		if (leftAngle < rightAngle) {
+			gameOver = this.angle > leftAngle && this.angle < rightAngle;
+		} else {
+			gameOver = this.angle > leftAngle || this.angle < rightAngle;
+		}
+		if (!gameOver) {
+			score++;
+			scoreHTML.textContent = score;
+			setColors();
+			if (score % 5 == 0) {
+				difficulty += 0.2;
+			}
 		}
 	}
 
 	draw() {
-		fill(255);
-		circle(this.center[0] + this.x, this.center[1] + this.y, 10);
+		fill(mainColor);
+		circle(center[0] + this.x, center[1] + this.y, 10);
 	}
 }

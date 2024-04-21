@@ -22,13 +22,7 @@ Este es un proyecto de programación en vivo donde programamos el videojuego "Su
 ### Pendiente
 
 - Ícono a la app
-- Score
-- Pulir la death-condition
-- Mensaje de reinicio de partida
 - Localstorage de record por usuario
-- Temas (colores)
-- Dificultad dinámica
-- Página de inicio
 - Efectos visuales
 - Efectos de sonido
 - Música
