@@ -4,7 +4,7 @@ const canvas = document.getElementById('canvas'),
 	width = 600,
 	center = [width / 2, height / 2];
 let player,
-	difficulty = 1,
+	difficulty = 2,
 	font,
 	bgColor,
 	mainColor,
@@ -22,7 +22,6 @@ function restartGame() {
 	hexagons = [];
 	score = 0;
 	scoreHTML.textContent = score;
-	difficulty = 2;
 	hexagonSpawn = new HexagonSpawn(difficulty);
 	setColors();
 }

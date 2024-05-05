@@ -12,11 +12,13 @@ class Player {
 
 	rotate(sign) {
 		this.angle =
-			(this.angle + 0.1 * sign + 2 * Math.PI) % (2 * Math.PI);
+			(this.angle + 0.05 * difficulty * sign + 2 * Math.PI) %
+			(2 * Math.PI);
 		this.rePos();
 	}
 
 	calcDeath(leftAngle) {
+		return;
 		let rightAngle =
 			(leftAngle + (5 * (2 * Math.PI)) / 6) % (2 * Math.PI);
 		if (leftAngle < rightAngle) {
@@ -27,9 +29,10 @@ class Player {
 		if (!gameOver) {
 			score++;
 			scoreHTML.textContent = score;
-			if (score % 5 == 0) {
+			if (score % 5 == 0 && score > 0) {
 				setColors();
-				difficulty += 0.2;
+				difficulty = Math.min(difficulty * 1.1, 4);
+				hexagonSpawn.resetInterval();
 			}
 		}
 	}
