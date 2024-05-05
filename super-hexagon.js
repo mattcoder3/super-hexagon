@@ -1,10 +1,14 @@
 const canvas = document.getElementById('canvas'),
 	scoreHTML = document.getElementById('scoreText'),
-	height = 400,
-	width = 600,
-	center = [width / 2, height / 2];
+	height = Math.min(400, innerHeight * 0.6),
+	width = Math.min(600, innerWidth * 0.8),
+	center = [width / 2, height / 2],
+	music = new Audio('assets/audio/game_music.m4a'),
+	addPointSound = new Audio('assets/audio/add_point.m4a'),
+	loseSound = new Audio('assets/audio/lose.m4a');
 let player,
 	difficulty = 2,
+	gameVolume = 0.3,
 	font,
 	bgColor,
 	mainColor,
@@ -37,6 +41,8 @@ function setColors() {
 function setup() {
 	createCanvas(width, height, canvas);
 	restartGame();
+	music.volume = gameVolume;
+	music.loop = true;
 }
 
 function draw() {
@@ -70,6 +76,8 @@ function draw() {
 			gameOver = false;
 			background(mainColor);
 			restartGame();
+			music.currentTime = 0;
+			music.play();
 		}
 
 		background(bgColor + '20');
@@ -78,14 +86,14 @@ function draw() {
 		noStroke();
 		textFont(font);
 		textAlign(CENTER);
-		textSize(25);
+		textSize(width / 24);
 		let scoreText = firstGame ? '' : 'SCORE: ' + score;
 		text(scoreText, center[0], center[1] - 50);
 		text('MAX SCORE: ' + maxScore, center[0], center[1] - 10);
 		let screenText = firstGame
 			? 'PRESS "SPACE" TO START'
 			: 'PRESS "SPACE" TO RESTART';
-		textSize(50);
+		textSize(width / 12);
 		text(screenText, center[0], center[1] + 75);
 	}
 }

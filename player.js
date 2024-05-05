@@ -26,6 +26,9 @@ class Player {
 			gameOver = this.angle > leftAngle || this.angle < rightAngle;
 		}
 		if (!gameOver) {
+			addPointSound.currentTime = 0;
+			addPointSound.volume = gameVolume;
+			addPointSound.play();
 			score++;
 			scoreHTML.textContent = score;
 			if (score % 5 == 0 && score > 0) {
@@ -34,6 +37,9 @@ class Player {
 				hexagonSpawn.resetInterval();
 			}
 		} else {
+			loseSound.play();
+			loseSound.volume = gameVolume;
+			music.pause();
 			updateLocalScore();
 		}
 	}

@@ -21,9 +21,5 @@ Este es un proyecto de programación en vivo donde programamos el videojuego "Su
 
 ### Pendiente
 
-- Ícono a la app
-- Efectos visuales
-- Efectos de sonido
-- Música
 - Leaderboard (usando una base de datos)
 - Gráficos de estadísticas

@@ -7,18 +7,114 @@
 			content="width=device-width, initial-scale=1.0" />
 		<title>Super Hexagon</title>
 		<link
+			rel="icon"
+			type="image/x-icon"
+			href="icon.ico" />
+		<link
 			rel="stylesheet"
 			href="styles.css" />
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 	</head>
 	<body>
+		<header class="header">
+			<nav class="navbar">
+				<div class="navbar_left">
+					<img
+						class="navbar_icon"
+						src="icon.png"
+						alt="Super Hexagon Icon" />
+					<h1 class="navbar_title">Super Hexagon</h1>
+				</div>
+				<div class="navbar_right">
+					<li class="navbar_item">
+						<a
+							class="navbar_link"
+							href=""
+							>Leaderboard</a
+						>
+					</li>
+					<li class="navbar_item">
+						<a
+							class="navbar_link"
+							href=""
+							>Statistics</a
+						>
+					</li>
+					<li class="navbar_item">
+						<a
+							class="navbar_link"
+							href="#info"
+							>Info</a
+						>
+					</li>
+				</div>
+			</nav>
+		</header>
 		<main id="game">
 			<div id="score">
 				<p id="scoreText">0</p>
 			</div>
 			<canvas id="canvas"></canvas>
+			<div class="volume-button-container">
+				<button id="volume-button">
+					<i
+						id="volume-icon"
+						class="fa-solid fa-volume-high icon"></i>
+				</button>
+			</div>
 		</main>
 
+		<section
+			class="game-info"
+			id="info">
+			<h3 class="game-info_title">About the game</h3>
+			<p class="game-info_text">
+				Super Hexagon is an indie arcade action video game developed
+				by Terry Cavanagh, with music composed by Chipzel. Originally
+				released for iOS in September 2012, versions for Windows and
+				macOS were released three months later, and Android,
+				BlackBerry and Linux versions followed in early 2013. The game
+				is based on an earlier prototype by Cavanagh, simply titled
+				Hexagon, which was created for a twelve-hour game jam in early
+				2012.
+			</p>
+			<p class="game-info_text">
+				For more info click
+				<a
+					class="game-info_link"
+					target="_blank"
+					href="https://en.wikipedia.org/wiki/Super_Hexagon"
+					>here</a
+				>.
+			</p>
+			<p class="game-info_text">
+				Original music
+				<a
+					class="game-info_link"
+					target="_blank"
+					href="https://www.youtube.com/watch?v=OuRvOCf9mJ4&list=PLwJjxqYuirCLkq42mGw4XKGQlpZSfxsYd&index=4&ab_channel=FreeMusic"
+					>here</a
+				>.
+			</p>
+		</section>
+
+		<footer class="footer">
+			<p class="footer_text">
+				Developed by
+				<a
+					href="https://www.youtube.com/@mattcoder3"
+					target="_blank"
+					class="footer_link"
+					>MattCoder</a
+				>
+			</p>
+		</footer>
+
 		<script src="p5.js"></script>
+		<script src="script.js"></script>
 		<script src="constants.js"></script>
 		<script src="player.js"></script>
 		<script src="hexagon.js"></script>

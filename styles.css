@@ -3,19 +3,54 @@
 * {
 	margin: 0;
 	padding: 0;
+	font-family: 'Jersey 10', sans-serif;
 }
 
 body {
 	background-color: #1f1c33;
 	height: 100vh;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
-	justify-content: center;
-	overflow: hidden;
+	justify-content: flex-start;
 }
 
 canvas {
 	border: 3px solid white;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.volume-button-container {
+	background-color: white;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #1f1c33;
+	border: none;
+	font-size: 3rem;
+	font-weight: bolder;
+	border-radius: 0 0 2rem 2rem;
+	width: 5rem;
+	height: 3rem;
+}
+
+#volume-button {
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	border: none;
+	background-color: transparent;
+}
+
+.icon {
+	font-size: 1.5rem;
+	width: 100%;
 }
 
 #score {
@@ -27,8 +62,103 @@ canvas {
 	color: #1f1c33;
 	font-size: 3rem;
 	font-weight: bolder;
-	font-family: 'Jersey 10', sans-serif;
 	border-radius: 2rem 2rem 0 0;
 	width: 5rem;
 	height: 3rem;
+}
+
+.navbar {
+	height: 5rem;
+	width: 90vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem;
+}
+
+.navbar_left {
+	width: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 2rem;
+}
+
+.navbar_right {
+	width: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.navbar_item {
+	color: white;
+	list-style: none;
+	font-size: 1.5rem;
+}
+
+.navbar_title {
+	color: white;
+	font-weight: bolder;
+	font-size: 3rem;
+}
+
+.navbar_icon {
+	width: 2rem;
+	height: auto;
+}
+
+.navbar_link {
+	color: white;
+	text-decoration: none;
+}
+
+.header {
+	height: 15rem;
+}
+
+.game-info {
+	margin: 6rem 0;
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	color: white;
+}
+
+.game-info_title {
+	font-size: 4rem;
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.game-info_text {
+	font-size: 2rem;
+	text-align: left;
+}
+
+.game-info_link {
+	color: white;
+}
+
+.footer {
+	height: 10rem;
+	color: white;
+	padding: 2rem;
+}
+
+.footer_link {
+	color: white;
+}
+
+@media (max-width: 720px) {
+	html {
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 530px) {
+	html {
+		font-size: 8px;
+	}
 }
