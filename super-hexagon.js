@@ -21,25 +21,27 @@ function restartGame() {
 	player = new Player(0);
 	hexagons = [];
 	score = 0;
+	scoreHTML.textContent = score;
 	difficulty = 2;
 	hexagonSpawn = new HexagonSpawn(difficulty);
+	setColors();
 }
 
 function setColors() {
 	let color_index = Math.floor(score / 5) % 6;
 	mainColor = COLORS[color_index].main;
 	bgColor = COLORS[color_index].background;
+	background(mainColor);
 }
 
 function setup() {
-	setColors();
 	createCanvas(width, height, canvas);
 	restartGame();
 }
 
 function draw() {
 	if (!gameOver) {
-		background(bgColor + '3C');
+		background(bgColor + '07');
 		fill(mainColor);
 		noStroke();
 
@@ -66,6 +68,7 @@ function draw() {
 		if (keyIsDown(32)) {
 			firstGame = false;
 			gameOver = false;
+			background(mainColor);
 			restartGame();
 		}
 

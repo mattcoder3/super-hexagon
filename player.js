@@ -27,8 +27,8 @@ class Player {
 		if (!gameOver) {
 			score++;
 			scoreHTML.textContent = score;
-			setColors();
 			if (score % 5 == 0) {
+				setColors();
 				difficulty += 0.2;
 			}
 		}

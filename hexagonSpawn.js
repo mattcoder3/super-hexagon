@@ -3,8 +3,8 @@ class HexagonSpawn {
 		this.count = count;
 		this.hexagons = [];
 		let hexagonSpawner = window.setInterval(() => {
-			this.hexagons.push(new Hexagon(400));
-		}, difficulty * 600);
+			this.hexagons.push(new Hexagon(height));
+		}, 1000);
 	}
 
 	draw() {
