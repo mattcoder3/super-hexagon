@@ -22,7 +22,6 @@ Este es un proyecto de programación en vivo donde programamos el videojuego "Su
 ### Pendiente
 
 - Ícono a la app
-- Localstorage de record por usuario
 - Efectos visuales
 - Efectos de sonido
 - Música

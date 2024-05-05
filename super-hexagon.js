@@ -9,6 +9,7 @@ let player,
 	bgColor,
 	mainColor,
 	score = 0,
+	maxScore = getLocalRecord(),
 	hexagonSpawn,
 	firstGame = true,
 	gameOver = true;
@@ -80,7 +81,7 @@ function draw() {
 		textSize(25);
 		let scoreText = firstGame ? '' : 'SCORE: ' + score;
 		text(scoreText, center[0], center[1] - 50);
-		text('MAX SCORE: ' + '100', center[0], center[1] - 10);
+		text('MAX SCORE: ' + maxScore, center[0], center[1] - 10);
 		let screenText = firstGame
 			? 'PRESS "SPACE" TO START'
 			: 'PRESS "SPACE" TO RESTART';

@@ -18,7 +18,6 @@ class Player {
 	}
 
 	calcDeath(leftAngle) {
-		return;
 		let rightAngle =
 			(leftAngle + (5 * (2 * Math.PI)) / 6) % (2 * Math.PI);
 		if (leftAngle < rightAngle) {
@@ -34,6 +33,8 @@ class Player {
 				difficulty = Math.min(difficulty * 1.1, 4);
 				hexagonSpawn.resetInterval();
 			}
+		} else {
+			updateLocalScore();
 		}
 	}
 
