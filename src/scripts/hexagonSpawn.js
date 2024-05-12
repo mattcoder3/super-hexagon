@@ -1,10 +1,12 @@
-class HexagonSpawn {
-	constructor(count) {
-		this.count = count;
+import Hexagon from './hexagon.js';
+
+export default class HexagonSpawn {
+	constructor(p) {
+		this.p = p;
 		this.hexagons = [];
 		this.hexagonSpawner = window.setInterval(() => {
-			this.hexagons.push(new Hexagon(height));
-		}, 2000 / difficulty);
+			this.hexagons.push(new Hexagon(p));
+		}, 2000 / p.difficulty);
 	}
 
 	draw() {
@@ -16,7 +18,7 @@ class HexagonSpawn {
 	resetInterval() {
 		clearInterval(this.hexagonSpawner);
 		this.hexagonSpawner = window.setInterval(() => {
-			this.hexagons.push(new Hexagon(height));
-		}, 2000 / difficulty);
+			this.hexagons.push(new Hexagon(this.p));
+		}, 2000 / this.p.difficulty);
 	}
 }

@@ -12,12 +12,14 @@ const get_url = `${API_URL}${apicoIntegrationId}/${spreadSheetId}/values/${sheet
 const append_url = `${API_URL}${apicoIntegrationId}/${spreadSheetId}/values/${sheetName}:append`;
 
 // Get sample
-const response = await fetch(get_url);
-const data = await response.json();
-console.log(data);
+export async function getData() {
+	const response = await fetch(get_url);
+	const data = await response.json();
+	return data;
+}
 
 // Append sample
-function addDataValue(username, score) {
+export function addDataValue(username, score) {
 	const options = {
 		method: 'POST',
 		url: append_url,
@@ -26,13 +28,13 @@ function addDataValue(username, score) {
 			insertDataOption: 'INSERT_ROWS',
 			includeValuesInResponse: true,
 		},
-		data: { values: [[new Date().toString(), 'Manolo', '75']] },
+		data: { values: [[new Date().toString(), username, score]] },
 	};
 
 	axios
 		.request(options)
 		.then(function (response) {
-			console.log(response.data);
+			return response.data;
 		})
 		.catch(function (error) {
 			console.error(error);

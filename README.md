@@ -21,8 +21,5 @@ Este es un proyecto de programación en vivo donde programamos el videojuego "Su
 
 ### Pendiente
 
-- Agregar para poner un username (vanilla)
-- Cuando termina la partida, se añade a tus scorelist (local storage)
-- Cuando termina la partida, se manda tu score a la bd (apico)
 - Pestaña para ver estadísticas globales y propias (chart.js [https://www.chartjs.org/docs/latest/charts/bar.html])
 - Pestaña de leaderboard del día, semana, mes y total (apico)

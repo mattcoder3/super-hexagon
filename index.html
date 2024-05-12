@@ -21,38 +21,68 @@
 	<body>
 		<header class="header">
 			<nav class="navbar">
-				<div class="navbar_left">
+				<a
+					class="navbar_left"
+					href="">
 					<img
-						class="navbar_icon"
+						class="navbar_logo"
 						src="/assets/icons/icon.png"
 						alt="Super Hexagon Icon" />
 					<h1 class="navbar_title">Super Hexagon</h1>
-				</div>
+				</a>
 				<div class="navbar_right">
 					<li class="navbar_item">
 						<a
 							class="navbar_link"
-							href=""
+							href="./src/views/leaderboard.html"
 							>Leaderboard</a
 						>
 					</li>
 					<li class="navbar_item">
 						<a
 							class="navbar_link"
-							href=""
+							href="./src/views/statistics.html"
 							>Statistics</a
 						>
 					</li>
-					<li class="navbar_item">
-						<a
+					<li class="navbar_item navbar_username">
+						<p
+							id="username"
 							class="navbar_link"
-							href="#info"
-							>Info</a
-						>
+							href="#info">
+							username
+						</p>
+						<i
+							id="change-username-button"
+							class="fa-solid fa-pencil navbar_icon"></i>
 					</li>
 				</div>
 			</nav>
 		</header>
+		<div
+			class="username-form-container"
+			id="username-form-container">
+			<form
+				class="username-form"
+				id="username-form">
+				<label
+					class="username-form_label"
+					for="username-input"
+					>New Username:</label
+				>
+				<input
+					class="username-form_input"
+					type="text"
+					value="username"
+					name="new-username"
+					id="username-input" />
+				<button
+					type="submit"
+					class="username-form_button">
+					Send
+				</button>
+			</form>
+		</div>
 		<main id="game">
 			<div id="score">
 				<p id="scoreText">0</p>
@@ -115,15 +145,14 @@
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
 		<script src="/src/scripts/p5.js"></script>
-		<script src="/src/scripts/script.js"></script>
-		<script src="/src/scripts/constants.js"></script>
-		<script src="/src/scripts/player.js"></script>
-		<script src="/src/scripts/hexagon.js"></script>
-		<script src="/src/scripts/utils.js"></script>
-		<script src="/src/scripts/hexagonSpawn.js"></script>
-		<script src="/src/scripts/super-hexagon.js"></script>
 		<script
 			src="/src/scripts/api/sheets.js"
+			type="module"></script>
+		<script
+			src="/src/scripts/script.js"
+			type="module"></script>
+		<script
+			src="/src/scripts/super-hexagon.js"
 			type="module"></script>
 	</body>
 </html>

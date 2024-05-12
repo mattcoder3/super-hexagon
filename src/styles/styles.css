@@ -82,6 +82,7 @@ main {
 	align-items: center;
 	justify-content: flex-start;
 	gap: 2rem;
+	text-decoration: none;
 }
 
 .navbar_right {
@@ -103,9 +104,20 @@ main {
 	font-size: 3rem;
 }
 
-.navbar_icon {
+.navbar_logo {
 	width: 2rem;
 	height: auto;
+}
+
+.navbar_username {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.navbar_icon {
+	font-size: 0.8rem;
+	cursor: pointer;
 }
 
 .navbar_link {
@@ -149,6 +161,44 @@ main {
 
 .footer_link {
 	color: white;
+}
+
+.username-form-container {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.7);
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	display: none;
+}
+
+.username-form {
+	position: absolute;
+	top: 30%;
+	width: 60vw;
+	height: 20vh;
+	color: white;
+	font-size: 2rem;
+	background-color: #1f1c33;
+	border: 3px solid white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1.5rem;
+	padding: 2rem;
+}
+
+.username-form_input {
+	font-size: 2rem;
+}
+
+.username-form_button {
+	font-size: 2rem;
+	width: 50%;
+	cursor: pointer;
 }
 
 @media (max-width: 720px) {

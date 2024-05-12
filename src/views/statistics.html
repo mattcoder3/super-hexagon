@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Super Hexagon</title>
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="/assets/icons/icon.ico" />
+		<link
+			rel="stylesheet"
+			href="/src/styles/styles.css" />
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+	</head>
+	<body>
+		<header class="header">
+			<nav class="navbar">
+				<a
+					class="navbar_left"
+					href="../../index.html">
+					<img
+						class="navbar_logo"
+						src="/assets/icons/icon.png"
+						alt="Super Hexagon Icon" />
+					<h1 class="navbar_title">Super Hexagon</h1>
+				</a>
+				<div class="navbar_right">
+					<li class="navbar_item">
+						<a
+							class="navbar_link"
+							href="./leaderboard.html"
+							>Leaderboard</a
+						>
+					</li>
+					<li class="navbar_item">
+						<a
+							class="navbar_link"
+							href="./statistics.html"
+							>Statistics</a
+						>
+					</li>
+				</div>
+			</nav>
+			<main>
+				<canvas id="chart"></canvas>
+			</main>
+		</header>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+		<script
+			src="../scripts/statistics.js"
+			type="module"></script>
+	</body>
+</html>
