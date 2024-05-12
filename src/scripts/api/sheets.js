@@ -16,8 +16,8 @@ const response = await fetch(get_url);
 const data = await response.json();
 console.log(data);
 
-Append sample
-function addDataValue(username, score){
+// Append sample
+function addDataValue(username, score) {
 	const options = {
 		method: 'POST',
 		url: append_url,
@@ -36,5 +36,5 @@ function addDataValue(username, score){
 		})
 		.catch(function (error) {
 			console.error(error);
-	});
+		});
 }
