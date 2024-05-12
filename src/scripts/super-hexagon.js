@@ -19,7 +19,7 @@ let player,
 	gameOver = true;
 
 function preload() {
-	font = loadFont('assets/Jersey10.ttf');
+	font = loadFont('assets/fonts/Jersey10.ttf');
 }
 
 function restartGame() {
