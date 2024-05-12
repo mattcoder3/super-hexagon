@@ -25,6 +25,7 @@ function preload() {
 function restartGame() {
 	player = new Player(0);
 	hexagons = [];
+	difficulty = 2;
 	score = 0;
 	scoreHTML.textContent = score;
 	hexagonSpawn = new HexagonSpawn(difficulty);
