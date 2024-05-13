@@ -4,10 +4,12 @@
 	margin: 0;
 	padding: 0;
 	font-family: 'Jersey 10', sans-serif;
+	box-sizing: border-box;
 }
 
 body {
 	background-color: #1f1c33;
+	color: white;
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -38,6 +40,10 @@ main {
 	border-radius: 0 0 2rem 2rem;
 	width: 5rem;
 	height: 3rem;
+}
+
+h2 {
+	font-size: 4rem;
 }
 
 #volume-button {
@@ -129,6 +135,12 @@ main {
 	height: 15rem;
 }
 
+.chart-container {
+	height: 60vh;
+	width: 60vw;
+	margin-top: 3rem;
+}
+
 .game-info {
 	margin: 6rem 0;
 	width: 90%;
@@ -199,6 +211,61 @@ main {
 	font-size: 2rem;
 	width: 50%;
 	cursor: pointer;
+}
+
+.leaderboard-container {
+	width: 100vw;
+	padding: 5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 2rem;
+	row-gap: 2rem;
+}
+
+.leaderboard {
+	height: auto;
+	width: 25vw;
+	min-width: 400px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.leaderboard_table {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	border: 3px solid white;
+	padding: 5rem;
+}
+
+.leaderboard_list {
+	width: 100%;
+}
+
+.leaderboard_title {
+	font-size: 2.5rem;
+}
+
+.leaderboard_item {
+	width: 100%;
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.leaderboard_item-text {
+	font-size: 2rem;
+}
+
+.leaderboard_item-score {
+	font-size: 3rem;
 }
 
 @media (max-width: 720px) {
