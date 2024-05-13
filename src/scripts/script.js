@@ -21,8 +21,8 @@ const volumeButton = document.getElementById('volume-button');
 const volumeIcon = document.getElementById('volume-icon');
 
 volumeButton.addEventListener('click', (e) => {
-	gameVolume = gameVolume === 0 ? 0.3 : 0;
-	music.volume = gameVolume;
+	p.gameVolume = p.gameVolume === 0 ? 0.3 : 0;
+	p.music.volume = p.gameVolume;
 	volumeIcon.classList.toggle('fa-volume-high');
 	volumeIcon.classList.toggle('fa-volume-xmark');
 });
